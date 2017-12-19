@@ -1,0 +1,16 @@
+{
+  "name": "github-api",
+  "version": "1.0.0",
+  "author": "alexraj",
+  "description": "API search methods",
+  "main": "./index.js",
+  "keywords": [
+    "consul"
+  ],
+  "dependencies": {
+    "async": "^2.6.0",
+    "express": "^4.16.2",
+    "fs-extra": "^4.0.2",
+    "github": "^12.0.3"
+  }
+}

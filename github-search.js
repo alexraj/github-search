@@ -14,10 +14,13 @@
  var userRepos = {}
  
  var github = new GitHubApi({});
- github.authenticate({
-     type: 'oauth',
-     token: '0a3cf22755adf91d898aa7e7b4e3df5ceac56d76'
- });
+ if (process.env['GIT_TOKEN']) {
+    github.authenticate({
+        type: 'oauth',
+        token: process.env.GIT_TOKEN
+    });
+ }
+
  
  exports.searchGIT = function(keyword, user, cb) {
     var response = {};
